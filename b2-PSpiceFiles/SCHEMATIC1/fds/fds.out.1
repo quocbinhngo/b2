@@ -1,0 +1,52 @@
+
+**** 12/29/21 23:19:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-fds"  [ C:\Users\ADMIN\Desktop\b2\b2-PSpiceFiles\SCHEMATIC1\fds.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "fds.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\ADMIN\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 22 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source B2
+V_V1         N00172 N00187 10Vdc
+R_R1         N00172 N00179  1k TC=0,0 
+R_R2         N00187 N00179  1k TC=0,0 
+R_R3         N00187 N00179  4k TC=0,0 
+L_L1         N00183 N00179  1mH IC=0.01 
+X_U1         N00187 N00183 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+
+**** RESUMING fds.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N00172 is floating
+
+ERROR(ORPSIM-15142): Node N00187 is floating
+
+ERROR(ORPSIM-15142): Node N00179 is floating
+
+ERROR(ORPSIM-15142): Node N00183 is floating
+
